@@ -1,0 +1,11 @@
+const P = { width: 18, height: 18, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, 'aria-hidden': true };
+export const IconRotL = () => <svg {...P}><path d="M3 12a9 9 0 1 0 3-6.7" /><path d="M3 4v5h5" /></svg>;
+export const IconRotR = () => <svg {...P}><path d="M21 12a9 9 0 1 1-3-6.7" /><path d="M21 4v5h-5" /></svg>;
+export const IconPlus = () => <svg {...P}><path d="M12 5v14M5 12h14" /></svg>;
+export const IconMinus = () => <svg {...P}><path d="M5 12h14" /></svg>;
+export const IconPlay = () => <svg {...P}><path d="M7 5l12 7-12 7z" /></svg>;
+export const IconPause = () => <svg {...P}><path d="M8 5v14M16 5v14" /></svg>;
+export const IconLink = () => <svg {...P}><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7" /><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7" /></svg>;
+export const IconX = () => <svg {...P}><path d="M6 6l12 12M18 6L6 18" /></svg>;
+export const IconCheck = () => <svg {...P}><path d="M5 12l5 5 9-11" /></svg>;
+export const IconChevron = ({ up }: { up?: boolean }) => <svg {...P} style={{ transform: up ? 'rotate(180deg)' : undefined }}><path d="M6 9l6 6 6-6" /></svg>;

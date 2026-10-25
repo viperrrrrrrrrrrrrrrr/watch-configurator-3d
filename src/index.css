@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/fraunces/wght-italic.css";
+@import "@fontsource-variable/fraunces/wght.css";
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces Variable", Georgia, serif;
+  --color-ink: #0b0c0f;
+  --color-panel: #131419;
+  --color-panel2: #1a1c22;
+  --color-line: #2c2f37;
+  --color-text: #ece9e2;
+  --color-muted: #aaa69d;
+  --color-gold: #d9b36c;
+  --color-gold2: #f0d59b;
+}
+
+html, body, #root { height: 100%; }
+body { background: var(--color-ink); color: var(--color-text); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid var(--color-gold2); outline-offset: 2px; }
+.stage-bg {
+  background:
+    radial-gradient(60% 55% at 50% 42%, #2a2c33 0%, #15161b 55%, #0b0c0f 100%);
+}
+.sweep { background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.06) 50%, transparent 70%); background-size: 250% 100%; animation: sweep 2.4s linear infinite; }
+@keyframes sweep { from { background-position: 120% 0 } to { background-position: -120% 0 } }
+.reduce *, .reduce *::before, .reduce *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+@media (prefers-reduced-motion: reduce) { .sweep { animation: none } }
+dialog::backdrop { background: rgba(5, 6, 8, 0.72); backdrop-filter: blur(6px); }
+.thin-scroll { scrollbar-width: thin; scrollbar-color: #3a3d46 transparent; }
