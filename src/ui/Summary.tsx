@@ -62,7 +62,7 @@ export function Summary({ open, shot, config, lines, total, description, link, o
                 <tr><th scope="row" className="pt-3 text-left font-serif text-lg font-normal">Sample total</th><td className="pt-3 text-right font-serif text-2xl tabular-nums" data-testid="summary-total" data-value={total}>{money(total)}</td></tr>
               </tfoot>
             </table>
-            <p className="mt-2 text-xs text-gold2">Sample prices in {pricing.currency}. Not a real offer.</p>
+            <p className="mt-2 text-xs text-gold2">Sample prices in {pricing.currency} for a fictional brand. Not a real offer.</p>
           </section>
 
           <section aria-labelledby="sum-share">
@@ -77,8 +77,8 @@ export function Summary({ open, shot, config, lines, total, description, link, o
           </section>
 
           <section aria-labelledby="sum-reserve" className="rounded-2xl border border-line bg-panel2 p-4">
-            <h3 id="sum-reserve" className="font-serif text-xl">Reserve</h3>
-            <p className="mt-1 text-xs text-muted">This form has no backend and sends nothing — your input never leaves this page.</p>
+            <h3 id="sum-reserve" className="font-serif text-xl">Reserve <span className="text-sm text-muted">(demo)</span></h3>
+            <p className="mt-1 text-xs text-muted">This is a demo form. It has no backend and sends nothing — your input never leaves this page.</p>
             {/* No action, no method, no name attributes: nothing can be submitted anywhere. */}
             <form className="mt-4 grid gap-3" data-testid="reserve-form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
               <div className="grid gap-3 sm:grid-cols-2">
@@ -102,10 +102,10 @@ export function Summary({ open, shot, config, lines, total, description, link, o
                 <textarea id="r-note" rows={2} className="w-full rounded-lg border border-line bg-panel px-3 py-2 text-sm focus:border-gold" />
               </div>
               <button type="submit" data-testid="reserve-submit" className="rounded-full bg-gold px-5 py-3 text-sm font-semibold text-ink hover:bg-gold2">
-                Reserve for {money(total)}
+                Reserve for {money(total)} (demo)
               </button>
               <p role="status" data-testid="reserve-status" className={sent ? 'rounded-lg border border-gold/40 bg-gold/10 px-3 py-2 text-sm text-gold2' : 'sr-only'}>
-                {sent ? 'Reservation not sent. This form has no backend, so nothing left your browser.' : ''}
+                {sent ? 'Demo — reservation not sent. This portfolio demo has no backend, so nothing left your browser.' : ''}
               </p>
             </form>
           </section>
