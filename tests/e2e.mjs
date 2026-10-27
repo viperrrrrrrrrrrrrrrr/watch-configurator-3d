@@ -24,8 +24,8 @@ const total = async () => Number(await page.getAttribute('[data-testid=total]', 
 const pick = async (k, id) => { await page.click(`label[for="opt-${k}-${id}"]`); };
 
 await page.goto(BASE + '/');
-check('demo banner shows the credit', (await page.textContent('[data-testid=demo-banner]')).includes('Demo website by Ivan Litvin · fictional brand, sample prices'));
-check('footer shows the credit', (await page.textContent('[data-testid=footer-credit]')).includes('Demo website by Ivan Litvin · fictional brand, sample prices'));
+check('no demo banner', (await page.locator('[data-testid=demo-banner]').count()) === 0);
+check('footer shows the credit', (await page.textContent('[data-testid=footer-credit]')).includes('Website by Ivan Litvin · sample prices'));
 check('sample-price note visible', await page.isVisible('[data-testid=sample-note]'));
 check('prerendered shell has the h1 before JS', (await (await fetch(BASE + '/')).text()).includes('V-40 Meridian</h1>'));
 await ready();

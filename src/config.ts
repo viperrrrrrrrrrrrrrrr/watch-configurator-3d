@@ -21,7 +21,7 @@ export const brand = {
   tagline: 'Build your own automatic watch',
   /** Only email used anywhere on the site. */
   email: 'hello@example.com',
-  credit: 'Demo website by Ivan Litvin · fictional brand, sample prices',
+  credit: 'Website by Ivan Litvin · sample prices',
 };
 
 export const pricing = {

@@ -100,7 +100,7 @@ export function caseBack(text: string) {
   g.font = `600 40px ${SANS}`;
   arcText(g, 'VESPRYN · V-40 MERIDIAN · AUTOMATIC', cx, cx, R * 0.835, -Math.PI / 2, 0.072);
   g.font = `500 32px ${SANS}`;
-  arcText(g, 'DEMO PIECE · FICTIONAL BRAND', cx, cx, R * 0.835, Math.PI / 2, -0.07, false);
+  arcText(g, 'BUILD YOUR OWN · V-40', cx, cx, R * 0.835, Math.PI / 2, -0.07, false);
   const t = text.trim();
   if (t) {
     g.fillStyle = '#3c3c3c';

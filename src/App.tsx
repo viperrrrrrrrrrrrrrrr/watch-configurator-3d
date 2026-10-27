@@ -130,13 +130,10 @@ export default function App() {
   return (
     <div className="flex h-full flex-col">
       <header className="contents">
-      <p className="relative z-30 bg-gold px-3 py-1.5 text-center text-xs font-medium text-ink" data-testid="demo-banner">
-        {brand.credit} — nothing here is for sale.
-      </p>
       <div className="relative z-20 flex items-center justify-between gap-3 border-b border-line bg-ink px-4 py-3 lg:px-6">
         <a href="/" className="flex items-baseline gap-2 rounded">
           <span className="font-serif text-xl font-semibold tracking-[0.28em] text-text">VESPRYN</span>
-          <span className="hidden text-[11px] uppercase tracking-[0.2em] text-muted sm:inline">Atelier · fictional</span>
+          <span className="hidden text-[11px] uppercase tracking-[0.2em] text-muted sm:inline">Atelier</span>
         </a>
         <div className="flex items-center gap-2">
           <button type="button" onClick={toggleReduced} aria-pressed={reduced}
@@ -218,7 +215,7 @@ export default function App() {
           <div id="options" className="thin-scroll min-h-0 flex-1 overflow-y-auto">
             <div className="px-5 pb-4 pt-2 lg:px-6 lg:pt-6">
               <h2 className="font-serif text-2xl text-text">Configure</h2>
-              <p className="mt-1 text-sm text-muted">Every change animates on the 3D model. Prices are sample prices for a fictional brand.</p>
+              <p className="mt-1 text-sm text-muted">Every change animates on the 3D model. Prices are sample prices.</p>
             </div>
             {optionKeys.map((k) => <OptionGroup key={k} k={k} value={config[k]} onChange={(v) => set(k, v)} />)}
 
@@ -249,7 +246,7 @@ export default function App() {
                 ))}
               </dl>
               <p className="mt-4 rounded-lg border border-gold/30 bg-gold/5 px-3 py-2 text-xs text-gold2" data-testid="sample-note">
-                Sample prices for a fictional brand ({pricing.currency}). Not a real offer — nothing can be bought here.
+                Sample prices ({pricing.currency}). Not a real offer — nothing can be bought here.
               </p>
             </div>
 
